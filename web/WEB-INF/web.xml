@@ -74,6 +74,15 @@
         <url-pattern>/rooms</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetPrivateMsgServlet</servlet-name>
+        <servlet-class>Server.GetPrivateMsgServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetPrivateMsgServlet</servlet-name>
+        <url-pattern>/my_msg</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

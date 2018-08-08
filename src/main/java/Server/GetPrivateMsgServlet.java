@@ -8,13 +8,11 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
-public class GetMsgServlet extends HttpServlet {
-    private final Rooms rooms = Rooms.getInstance();
-
+public class GetPrivateMsgServlet extends HttpServlet {
+    private final AccountList accountList = AccountList.getInstance();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String fromStr = request.getParameter("from");
-        String roomName = request.getParameter("room");
-
+        String login = request.getParameter("login");
         int from = 0;
         try {
             from = Integer.parseInt(fromStr);
@@ -23,12 +21,8 @@ public class GetMsgServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
-        if (!rooms.isPresent(roomName)){
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-        }
         response.setContentType("application/json");
-        String json = rooms.toJSON(from,roomName);
-
+        String json = accountList.get(login).toJSON(from);
         if (json != null) {
             OutputStream os = response.getOutputStream();
             byte[] buf = json.getBytes(StandardCharsets.UTF_8);

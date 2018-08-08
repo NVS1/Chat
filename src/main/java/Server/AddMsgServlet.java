@@ -16,10 +16,13 @@ public class AddMsgServlet extends HttpServlet {
         byte[] buf = requestBodyToArray(req);
         String bufStr = new String(buf, StandardCharsets.UTF_8);
         Message msg = Message.fromJSON(bufStr);
-        if (msg.getRoom().equals("global")){
+        if (msg.getRoom().equals("global") && msg.getTo()==null){
             rooms.getGlobalRoom().addMsg(msg);
-        } else if (rooms.isPresent(msg.getRoom())){
+        } else if (rooms.isPresent(msg.getRoom()) && msg.getTo()==null){
             rooms.getRoom(msg.getRoom()).addMsg(msg);
+        } else if (accountList.isRegistered(msg.getTo())){
+            accountList.get(msg.getTo()).addMsg(msg);
+            accountList.get(msg.getFrom()).addMsg(msg);
         } else{
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }

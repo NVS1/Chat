@@ -1,9 +1,16 @@
 package Server;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.LinkedList;
+import java.util.List;
+
 public class Account {
     private final String login;
     private final String pass;
     private boolean isOnline;
+    private final List<Message> messages = new LinkedList<>();
 
     public Account(String login, String pass) {
         this.login = login;
@@ -19,12 +26,18 @@ public class Account {
         return pass;
     }
 
-    public void setOnline(boolean online) {
-        isOnline = online;
+    public void setOnline(boolean status) {
+        isOnline = status;
     }
 
     public boolean isOnline() {
         return isOnline;
     }
-
+    public void addMsg (Message message){
+        messages.add(message);
+    }
+    public String toJSON (int n){
+        Gson gson = new GsonBuilder().create();
+        return gson.toJson(new JsonMessages(messages, n));
+    }
 }
