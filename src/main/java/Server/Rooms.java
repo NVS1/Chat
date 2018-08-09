@@ -1,5 +1,7 @@
 package Server;
 
+import Server.Json.JsonMessages;
+import Server.Json.JsonRooms;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

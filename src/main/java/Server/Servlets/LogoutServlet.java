@@ -1,4 +1,7 @@
-package Server;
+package Server.Servlets;
+
+import Server.Account;
+import Server.AccountList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

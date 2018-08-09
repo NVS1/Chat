@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>GetMsg</servlet-name>
-        <servlet-class>Server.GetMsgServlet</servlet-class>
+        <servlet-class>Server.Servlets.GetMsgServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetMsg</servlet-name>
@@ -14,7 +14,7 @@
 
     <servlet>
         <servlet-name>AddMsg</servlet-name>
-        <servlet-class>Server.AddMsgServlet</servlet-class>
+        <servlet-class>Server.Servlets.AddMsgServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddMsg</servlet-name>
@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>SignUpServlet</servlet-name>
-        <servlet-class>Server.SignUpServlet</servlet-class>
+        <servlet-class>Server.Servlets.SignUpServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
@@ -32,7 +32,7 @@
 
     <servlet>
         <servlet-name>SignInServlet</servlet-name>
-        <servlet-class>Server.SignInServlet</servlet-class>
+        <servlet-class>Server.Servlets.SignInServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SignInServlet</servlet-name>
@@ -41,7 +41,7 @@
 
     <servlet>
         <servlet-name>CreateRoomServlet</servlet-name>
-        <servlet-class>Server.CreateRoomServlet</servlet-class>
+        <servlet-class>Server.Servlets.CreateRoomServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CreateRoomServlet</servlet-name>
@@ -49,7 +49,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>GetAllUsersServlet</servlet-name>
-        <servlet-class>Server.GetAllUsersServlet</servlet-class>
+        <servlet-class>Server.Servlets.GetAllUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetAllUsersServlet</servlet-name>
@@ -58,7 +58,7 @@
 
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>Server.LogoutServlet</servlet-class>
+        <servlet-class>Server.Servlets.LogoutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
@@ -67,7 +67,7 @@
 
     <servlet>
         <servlet-name>GetRoomsServlet</servlet-name>
-        <servlet-class>Server.GetRoomsServlet</servlet-class>
+        <servlet-class>Server.Servlets.GetRoomsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetRoomsServlet</servlet-name>
@@ -76,7 +76,7 @@
 
     <servlet>
         <servlet-name>GetPrivateMsgServlet</servlet-name>
-        <servlet-class>Server.GetPrivateMsgServlet</servlet-class>
+        <servlet-class>Server.Servlets.GetPrivateMsgServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetPrivateMsgServlet</servlet-name>

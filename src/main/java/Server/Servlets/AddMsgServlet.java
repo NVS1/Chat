@@ -1,4 +1,8 @@
-package Server;
+package Server.Servlets;
+
+import Server.AccountList;
+import Server.Message;
+import Server.Rooms;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,6 @@
-package Server;
+package Server.Json;
+
+import Server.Room;
 
 import java.util.*;
 

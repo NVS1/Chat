@@ -1,4 +1,7 @@
-package Server;
+package Server.Servlets;
+
+import Server.Room;
+import Server.Rooms;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -1,4 +1,6 @@
-package Server;
+package Server.Servlets;
+
+import Server.AccountList;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

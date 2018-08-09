@@ -1,4 +1,6 @@
-package Server;
+package Server.Json;
+
+import Server.Account;
 
 import java.util.*;
 
